@@ -1,0 +1,3 @@
+http://ipv4address/on -> led trun on
+http://ipv4address/off -> led trun off
+http://ipv4address/blink -> led blink 5 times
