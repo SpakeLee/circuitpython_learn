@@ -1,0 +1,3 @@
+esptool --port COM47 erase_flash
+esptool --port COM47 --baud 115200 write_flash --flash_size=detect -fm dio 0 "D:\esp8266-20210618-v1.16.bin"
+esptool --chip auto --port COM52 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 40m --flash_size 4MB 0x0000 "d:\adafruit-circuitpython-ai_thinker_esp_12k_nodemcu-en_US-7.0.0.bin"
