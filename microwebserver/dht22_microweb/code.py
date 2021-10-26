@@ -9,7 +9,7 @@ from digitalio import DigitalInOut, Direction
 led = DigitalInOut(board.IO2)
 led.direction = Direction.OUTPUT
 led.value = False
-dht = adafruit_dht.DHT22(board.IO45)
+dht = adafruit_dht.DHT22(board.IO42)
 
 headers = {
     "Content-Type": "application/json; charset=UTF-8",
@@ -53,7 +53,7 @@ try:
     print("Connecting to %s..." % secrets["ssid"])
     print("MAC: ", [hex(i) for i in wifi.radio.mac_address])
     wifi.radio.connect(secrets["ssid"], secrets["password"])
-    for i in range(3):
+    for i in range(10):
         led.value = True
         time.sleep(0.3)
         led.value = False
